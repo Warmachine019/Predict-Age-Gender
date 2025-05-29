@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict your Age and Gender! Website</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Predict Your Age and Gender</h1>
+    <h2>Enter your first name below:</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Your name" required>
+        <button type="submit">Go</button>
+    </form>
+</body>
+<footer>
+    <p>The year is: {{ year }}. Built by Spandan.</p>
+</footer>
+</html>
